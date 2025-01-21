@@ -10,7 +10,11 @@
     <div class="flex gap-3">
       @for (item of week(); track $index) {
       <div
-        class="border rounded-md p-2 flex flex-col-reverse justify-center items-center w-[80px] h-[80px]"
+        (click)="onDate($index)"
+        class="border rounded-md p-2 flex flex-col-reverse justify-center items-center w-[80px] h-[80px] cursor-pointer"
+        [ngClass]="{
+          'border border-[#ED1C7C] text-[#ED1C7C]': selectedIndex() === $index
+        }"
       >
         <span>{{ item | date : "dd MMM" : "" : "ka" }}</span>
         <span>{{ item | date : "ccc" : "" : "ka" }}</span>

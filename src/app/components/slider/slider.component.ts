@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 
 import {
@@ -10,11 +10,16 @@ import {
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, CommonModule],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
 })
 export class SliderComponent {
+  selectedIndex = signal<number | null>(null);
+
+  onDate(index: number) {
+    this.selectedIndex.set(index);
+  }
   fixedToday = signal(new Date());
   today = signal(new Date());
   endDate = computed(() => addDays(this.today(), 6));
@@ -37,9 +42,11 @@ export class SliderComponent {
   }
   onNextWeek() {
     this.today.set(addDays(this.today(), 7));
+    this.selectedIndex.set(null);
   }
 
   onPreviousWeek() {
     this.today.set(subDays(this.today(), 7));
+    this.selectedIndex.set(null);
   }
 }
