@@ -1,0 +1,22 @@
+<section class="mt-4 flex justify-around items-center gap-4">
+  <div>
+    <span>დღეს - </span>
+    {{ today() | date : "dd MMM" : "" : "ka" }}
+  </div>
+  <div class="flex justify-around gap-4">
+    <button [disabled]="isDisabled()" (click)="onPreviousWeek()">
+      previous
+    </button>
+    <div class="flex gap-3">
+      @for (item of week(); track $index) {
+      <div
+        class="border rounded-md p-2 flex flex-col-reverse justify-center items-center w-[80px] h-[80px]"
+      >
+        <span>{{ item | date : "dd MMM" : "" : "ka" }}</span>
+        <span>{{ item | date : "ccc" : "" : "ka" }}</span>
+      </div>
+      }
+    </div>
+    <button (click)="onNextWeek()">next</button>
+  </div>
+</section>
