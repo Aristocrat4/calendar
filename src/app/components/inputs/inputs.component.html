@@ -1,0 +1,8 @@
+<section>
+  <input list="clinic" />
+  <select id="clinic">
+    @for (clinic of service.mockClinics; track $index) {
+    <option [value]="clinic">{{ clinic }}</option>
+    }
+  </select>
+</section>
