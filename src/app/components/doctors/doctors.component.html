@@ -1,0 +1,105 @@
+<section class="w-full">
+  <div class="doctor">
+    <h2 class="mt-6 text-sm mb-4">პირადი ექიმი</h2>
+    <div
+      class="border border-[#DEE0E8] rounded-lg pt-6 px-8 shadow-custom mb-3"
+    >
+      <div class="boxes relative" [class.notExpanded]="isExpanded">
+        <div class="boxdoct flex flex-col gap-8">
+          <div class="doctor-profile flex gap-4">
+            <img
+              class="w-[72px] h-[72px] rounded-[50%]"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg"
+              alt=""
+            />
+            <div class="details flex flex-col">
+              <div class="flex gap-3 items-center">
+                <h3 class="text-sm text-[#292562] underline">
+                  ალექსანდრე მარგველაშვილი
+                </h3>
+                <span class="text-pink-600 text-sm">პირადი ექიმი</span>
+              </div>
+              <div class="clinic-details flex gap-2 items-center">
+                <span>🏥</span>
+                <div class="flex flex-col text-[#9199B4] text-sm">
+                  <span
+                    >მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span
+                  >
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="times flex gap-5 flex-wrap py-4 border-y border-dashed">
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+          </div>
+        </div>
+        <div class="boxdoct flex flex-col gap-8 mt-4">
+          <div class="doctor-profile flex gap-4">
+            <img
+              class="w-[72px] h-[72px] rounded-[50%]"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg"
+              alt=""
+            />
+            <div class="details flex flex-col">
+              <div class="flex gap-3 items-center">
+                <h3 class="text-sm text-[#292562] underline">
+                  ალექსანდრე მარგველაშვილი
+                </h3>
+                <span class="text-pink-600 text-sm">პირადი ექიმი</span>
+              </div>
+              <div class="clinic-details flex gap-2 items-center">
+                <span>🏥</span>
+                <div class="flex flex-col text-[#9199B4] text-sm">
+                  <span
+                    >მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span
+                  >
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="times flex gap-5 flex-wrap py-4 border-y border-dashed">
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:20 - 10:40</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">10:40 - 11:00</span>
+            <span class="bg-[#F4F4FE] p-[9px] rounded-lg">11:00 - 11:20</span>
+          </div>
+        </div>
+        <div
+          class="blurred absolute bottom-0 min-h-[130px] w-full"
+          [class.hidden]="!isExpanded"
+        ></div>
+      </div>
+      <div
+        class="flex justify-center items-center py-4 border-t border-[#E0E1EA] mt-4"
+      >
+        <button
+          (click)="toggleSeeMore()"
+          class="border-none bg-transparent text-pink-500"
+        >
+          ყველას ნახვა
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

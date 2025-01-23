@@ -5,14 +5,10 @@ export interface TimeSlot {
 }
 
 export interface Doctor {
-  id: number;
   name: string;
-  imageUrl: string;
-  specialty: string;
-  clinicInfo: string;
-  experienceYears: number;
-  slots: TimeSlot[];
-  type: DoctorType;
+  hospital: string;
+  language: string[];
+  field: string;
 }
 
 export enum DoctorType {

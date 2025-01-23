@@ -1,26 +1,48 @@
-<section class="mt-4 flex justify-around items-center gap-4">
-  <div>
+<section class="mt-4 flex justify-between items-center gap-4 bg-[#F9F9FE] pb-6">
+  <div
+    class="text-[#292562] text-sm flex gap-2 border border-[#DEE0E8] rounded-xl py-3 px-6"
+  >
+    <img src="/calendar-cursor.svg" alt="calendar" />
     <span>დღეს - </span>
     {{ today() | date : "dd MMM" : "" : "ka" }}
   </div>
-  <div class="flex justify-around gap-4">
-    <button [disabled]="isDisabled()" (click)="onPreviousWeek()">
-      previous
+  <div class="flex justify-around items-center gap-10">
+    <button
+      class="w-[49px] h-[49px] border border-[#DEE0E8] rounded-xl flex justify-center items-center"
+      [disabled]="isDisabled()"
+      (click)="onPreviousWeek()"
+    >
+      <img class="w-[9px]" src="/chevron-right@2x.png" alt="left" />
     </button>
     <div class="flex gap-3">
       @for (item of week(); track $index) {
       <div
         (click)="onDate($index)"
-        class="border rounded-md p-2 flex flex-col-reverse justify-center items-center w-[80px] h-[80px] cursor-pointer"
+        class="border rounded-md p-2 flex flex-col-reverse justify-center items-center w-[80px] h-[80px] cursor-pointer relative"
         [ngClass]="{
-          'border border-[#ED1C7C] text-[#ED1C7C]': selectedIndex() === $index
+          'border !bg-[#F9F9FE] border-[#ED1C7C] text-[#ED1C7C] after:content-[\'\'] after:block after:bg-[#ED1C7C] after:w-[6px] after:h-[6px] after:absolute after:-bottom-[10px] after:rounded-[50%]':
+            selectedIndex() === $index
         }"
+        [ngStyle]="
+          selectedIndex() === $index
+            ? { 'background-color': '#F5F5F5', color: '#ED1C7C' }
+            : {}
+        "
       >
-        <span>{{ item | date : "dd MMM" : "" : "ka" }}</span>
-        <span>{{ item | date : "ccc" : "" : "ka" }}</span>
+        <span class="text-base text-[#292562]">{{
+          item | date : "dd MMM" : "" : "ka"
+        }}</span>
+        <span class="text-sm text-[#9199B4]">{{
+          item | date : "ccc" : "" : "ka"
+        }}</span>
       </div>
       }
     </div>
-    <button (click)="onNextWeek()">next</button>
+    <button
+      class="w-[49px] h-[49px] border border-[#DEE0E8] rounded-xl flex justify-center items-center"
+      (click)="onNextWeek()"
+    >
+      <img class="w-[9px]" src="/chevron-right.svg" alt="right" />
+    </button>
   </div>
 </section>

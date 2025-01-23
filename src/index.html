@@ -1,13 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Calendar</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calendar</title>
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      @media (max-width: 640px) {
+        .scale-on-mobile {
+          transform: scale(0.8);
+          transform-origin: top left;
+          width: 125%;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <app-root></app-root>
+  </body>
 </html>

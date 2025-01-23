@@ -15,7 +15,7 @@ import {
   styleUrl: './slider.component.scss',
 })
 export class SliderComponent {
-  selectedIndex = signal<number | null>(null);
+  selectedIndex = signal<number | null>(0);
 
   onDate(index: number) {
     this.selectedIndex.set(index);

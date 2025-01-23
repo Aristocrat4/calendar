@@ -1,8 +1,106 @@
-<section>
-  <input list="clinic" />
-  <select id="clinic">
-    @for (clinic of service.mockClinics; track $index) {
-    <option [value]="clinic">{{ clinic }}</option>
-    }
-  </select>
+<section
+  class="flex items-center justify-start flex-wrap gap-4 mt-8 max-w-[1160px] w-full"
+>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >კლინიკა</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      @for (item of hospitals; track $index) {
+
+      <option [value]="item">{{ item }}</option>
+      }
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >ენა</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      @for (item of languages; track $index) {
+      <option [value]="item">{{ item }}</option>
+      }
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >პირადი ექიმი</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      @for (item of doctors; track $index) {
+
+      <option [value]="item.name">{{ item.name }}</option>
+      }
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >სპეციალობა</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      @for (item of uniqueFields; track $index) {
+
+      <option [value]="item">{{ item }}</option>
+      }
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >სპეციალისტი</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      <option value="კურაციო">კურაციო</option>
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >კვლევის დასახელება</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      <option value="კურაციო">კურაციო</option>
+    </select>
+  </div>
+  <div class="relative w-[250px]">
+    <label
+      for="clinic"
+      class="absolute -top-[13px] bg-white px-1 left-[15px] text-[#9199B4]"
+      >ექიმი</label
+    >
+    <select
+      id="clinic"
+      class="border border-[#B1B7CA] rounded-lg py-[14px] pl-[14px] w-full"
+    >
+      <option value="კურაციო">კურაციო</option>
+    </select>
+  </div>
 </section>
